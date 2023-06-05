@@ -1,0 +1,21 @@
+For VITE =>
+-> npm create vite@latest ./ -- --template react
+-> npm install
+-> npm run dev
+
+For TailWindCSS =>
+-> npm install -D tailwindcss
+-> npm tailwindcss init
+
+For all the other packages =>
+-> npm install --legacy-peer-deps @react-three/fiber @react-three/drei maath react-tilt react-vertical-timeline-component @emailjs/browser frame-motion react-router-dom
+
+/*
+
+ ~ *react-three/fiber* is a three.js library for writting three.js code in react fashion 
+ ~ *react-three/drei maath* provides maath utility functions
+ ~ *react-tilt* provides animation
+ ~ *emailjs/browser* provides an email and its service on browser
+ ~ 
+
+*/
