@@ -1,6 +1,5 @@
-import React, { useEffect,useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom';
-import { styles } from '../styles';
 import { navLinks } from '../constants';
 import logo from "../assets/logo.svg";
 import { menu, close } from '../assets';
@@ -17,9 +16,9 @@ const Navbar = () => {
           window.scrollTo(0,0);
         }}
         >
-          <img src={logo} alt="logo" className=" sm:w-15 sm:h-15 xs:w-10 xs:h-10 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer">
-            Kushagra Agarwal
+          <img src={logo} alt="logo" className='w-9 h-9 object-contain' />
+          <p className="text-white text-[18px] font-bold cursor-pointer flex">
+            Kushagra &nbsp;<span className='sm:block hidden'>Agarwal</span>
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
@@ -51,7 +50,7 @@ const Navbar = () => {
                   key={link.id}
                   className={`${
                     active===link.title? "text-white" : "text-secondary"
-                  } font-poppins font-medium cursor-pointer text-[16px] hover:text-white text-[18px] font-medium cursor-pointer`}
+                  } font-poppins font-medium cursor-pointer text-[16px] hover:text-white text-[18px] cursor-pointer`}
                   onClick={()=>{
                     setToggle(!toggle);
                     setActive(link.title);

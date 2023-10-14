@@ -21,6 +21,9 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
       },
+      cursor:{
+        "fancy": "url('/src/assets/cursor1.svg'),auto",
+      }
     },
   },
   plugins: [],

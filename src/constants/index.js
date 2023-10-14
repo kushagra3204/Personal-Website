@@ -1,27 +1,23 @@
 import {
-    mobile,
-    backend,
-    creator,
-    web,
     javascript,
-    typescript,
     html,
     css,
     reactjs,
-    redux,
     tailwind,
     nodejs,
     mongodb,
     git,
-    figma,
-    docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
+    c,
+    cpp,
+    java,
+    spring,
+    flask,
+    python,
+    flutter,
+    selenium,
+    firebase,
+    dart,
+    mysql,
     threejs,
   } from "../assets";
   
@@ -31,8 +27,12 @@ import {
       title: "About",
     },
     {
-      id: "work",
-      title: "Work",
+      id: "skills",
+      title: "Skills",
+    },
+    {
+      id: "projects",
+      title: "Projects",
     },
     {
       id: "contact",
@@ -40,26 +40,51 @@ import {
     },
   ];
   
-  const services = [
-    {
-      title: "Web Developer",
-      icon: web,
-    },
-    {
-      title: "React Native Developer",
-      icon: mobile,
-    },
-    {
-      title: "Backend Developer",
-      icon: backend,
-    },
-    {
-      title: "Content Creator",
-      icon: creator,
-    },
-  ];
-  
   const technologies = [
+    {
+      name: "C",
+      icon: c,
+    },
+    {
+      name: "C++",
+      icon: cpp
+    },
+    {
+      name: "Java",
+      icon: java,
+    },
+    {
+      name: "Spring Framework",
+      icon: spring
+    },
+    {
+      name: "Python",
+      icon: python
+    },
+    {
+      name: "Flask",
+      icon: flask,
+    },
+    {
+      name: "Selenium",
+      icon: selenium
+    },
+    {
+      name: "Dart",
+      icon: dart,
+    },
+    {
+      name: "Flutter",
+      icon: flutter
+    },
+    {
+      name: "Firebase",
+      icon: firebase
+    },
+    {
+      name: "MySQL",
+      icon: mysql,
+    },
     {
       name: "HTML 5",
       icon: html,
@@ -73,16 +98,8 @@ import {
       icon: javascript,
     },
     {
-      name: "TypeScript",
-      icon: typescript,
-    },
-    {
       name: "React JS",
       icon: reactjs,
-    },
-    {
-      name: "Redux Toolkit",
-      icon: redux,
     },
     {
       name: "Tailwind CSS",
@@ -103,163 +120,40 @@ import {
     {
       name: "git",
       icon: git,
-    },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
-    },
-  ];
-  
-  const experiences = [
-    {
-      title: "React.js Developer",
-      company_name: "Starbucks",
-      icon: starbucks,
-      iconBg: "#383E56",
-      date: "March 2020 - April 2021",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "React Native Developer",
-      company_name: "Tesla",
-      icon: tesla,
-      iconBg: "#E6DEDD",
-      date: "Jan 2021 - Feb 2022",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "Web Developer",
-      company_name: "Shopify",
-      icon: shopify,
-      iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "Full stack Developer",
-      company_name: "Meta",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-  ];
-  
-  const testimonials = [
-    {
-      testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
-    },
-    {
-      testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
-    },
-    {
-      testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
-    },
+    }
   ];
   
   const projects = [
     {
-      name: "Car Rent",
-      description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      title: "NGO Link",
+      tech: "Flutter, Firebase, Rowy, Python, JSON, Figma.",
+      about: "This Project aims to help & aware people about NGO's, Companies CSR roles & their functionalities which it provides to help the needy ones. (Mobile App & WebApp)",
+      links: "https://github.com/kushagra3204/NGO-Link-Flutter",
     },
     {
-      name: "Job IT",
-      description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "restapi",
-          color: "green-text-gradient",
-        },
-        {
-          name: "scss",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      title: "Secured Chat Application",
+      tech: "HTML, CSS, JavaScript, Node.js, React.js, CryptoJS, Python, Flask, Firebase.",
+      about: "An End-to-End Encrypted Chat Application with Intrusion Detection & Packet Sniffing which authenticates users and verifies them users can send messages to each another which is secured (SHA256+AES+Salting) and stores data in database (Firebase).",
+      links: "https://github.com/kushagra3204/"
     },
     {
-      name: "Trip Guide",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "supabase",
-          color: "green-text-gradient",
-        },
-        {
-          name: "css",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      title: "Billboard To Spotify",
+      tech: "Python, Spotipy, Spotify API.",
+      about: "An Application which ask user date or year of which he wants the top 100 famous songs listed on BillBoard & creates a playlist in spotify & automatically searches & stores user's favorite 100+ songs.",
+      links: "https://github.com/kushagra3204/BillBoardToSpotify",
     },
+    {
+      title: "Musify",
+      tech: "Java, XML, Firebase.",
+      about: "An Android Music Player application using Java & XML which asks user to sign up/in & backend with google firebase & cloud which includes storage of user information & songs.",
+      links: "https://github.com/kushagra3204/MusifyApp-Java-&roid",
+    },
+    {
+      title: "Robust Human & Oclussion Detection",
+      tech: "OpenCV, Tensorflow, MediaPipe, Python",
+      about: "This Project aims to recognize specific anomalous human activities & track humans even when they are partially or fully occluded by objects or obstacles.",
+      links: "https://github.com/kushagra3204/Robust-Human-and-Occlusion-Detection",
+    }
   ];
   
-  export { services, technologies, experiences, testimonials, projects };
+  export { technologies, projects };

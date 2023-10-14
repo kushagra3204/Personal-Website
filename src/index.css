@@ -11,6 +11,28 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
+  
+}
+
+/* Hide the scrollbar for modern browsers (Firefox) */
+div {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for WebKit-based browsers (Chrome, Safari) */
+div::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.cursorfx {
+  background-color: #fff;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .hash-span {
