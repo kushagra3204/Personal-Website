@@ -10,7 +10,7 @@ import { codechef } from '../assets'
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()} className='mt-5'>
+      <motion.div variants={textVariant()} className='mt-5 sm:mt-10 xs:mt-10'>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>About Me</h2>
       </motion.div>

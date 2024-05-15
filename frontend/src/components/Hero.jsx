@@ -21,7 +21,7 @@ const Hero = () => {
       <div className="xl:h-[600px] lg:h-[600px] md:h-[550px] sm:flex hidden bottom-4 absolute justify-center items-center w-full">
         <ComputersCanvas/>
       </div>
-      <div className="w-full absolute flex justify-center items-center bottom-12 md:hidden xl:hidden lg:hidden sm:hidden">
+      <div className="w-full absolute flex justify-center items-center bottom-20 md:hidden xl:hidden lg:hidden sm:hidden">
         <img src={programming} className="h-[270px] w-[270px]" />
       </div>
       
