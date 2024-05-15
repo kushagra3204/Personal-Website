@@ -35,6 +35,7 @@ const Skills = () => {
     <div>
         <motion.div 
             variants={textVariant()}
+            className='mt-5'
         >
             <p className={styles.sectionSubText}>Languages & Frameworks Worked with</p>
             <h2 className={styles.sectionHeadText}>Skills</h2>

@@ -3,6 +3,8 @@ import github from "./github.png";
 import instagram from "./instagram.svg";
 import linkedin from "./linkedin.png";
 import codechef from "./codechef.png";
+import programming from "./programming.svg";
+
 
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -35,6 +37,7 @@ import ContactBg from "./contact.svg";
 
 export {
   logo,
+  programming,
   github,
   instagram,
   linkedin,

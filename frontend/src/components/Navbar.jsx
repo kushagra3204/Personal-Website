@@ -2,26 +2,30 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { navLinks } from '../constants';
 import logo from "../assets/logo.svg";
+import { motion } from 'framer-motion';
 import { menu, close } from '../assets';
+import { fadeIn, textVariant } from '../utils/motion'
+import "../App.css";
 
 const Navbar = () => {
   const [active,setActive]=useState('');
   const [toggle,setToggle]=useState(false);
+
   return (
-    <nav className={`px-8 w-full flex items-center py-3 fixed top-0 z-20 bg-primary`} >
+    <nav className={`px-8 w-3/4 flex items-center xl:py-5 lg:py-5 md:py-5 sm:py-5 py-4 fixed top-0 z-20 bg-primary mt-3 rounded-px custom-rounded-px box`} >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link to="/" className="flex items-center gap-2"
-        onClick={()=>{
-          setActive("");
-          window.scrollTo(0,0);
-        }}
+          onClick={()=>{
+            setActive("");
+            window.scrollTo(0,0);
+          }}
         >
           <img src={logo} alt="logo" className='w-9 h-9 object-contain' />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            Kushagra &nbsp;<span className='sm:block hidden'>Agarwal</span>
+            Kushagra &nbsp;<span className='lg:block xl:block hidden'>Agarwal</span>
           </p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none xs:hidden sm:hidden md:flex flex-row gap-10 hidden">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -35,7 +39,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="md:hidden flex flex-1 justify-end items-center">
           
           <img src={toggle?close:menu} 
             alt="menu" className="w-[28px] h-[28px] object-contain cursor-pointer"

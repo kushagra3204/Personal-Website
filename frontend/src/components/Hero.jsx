@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import {programming} from "../assets";
 
 const Hero = () => {
   return (
@@ -16,23 +17,27 @@ const Hero = () => {
           
         </div>
       </div>
-      <ComputersCanvas/>
-
+      
+      <div className="xl:h-[600px] lg:h-[600px] md:h-[550px] sm:flex hidden bottom-4 absolute justify-center items-center w-full">
+        <ComputersCanvas/>
+      </div>
+      <div className="w-full absolute flex justify-center items-center bottom-12 md:hidden xl:hidden lg:hidden sm:hidden">
+        <img src={programming} className="h-[270px] w-[270px]" />
+      </div>
+      
       <a href='#about'>
-        <div className='absolute bottom-16 w-full flex justify-center items-center'>
-            <div className='w-[32px] h-[60px] rounded-3xl border-4 border-white flex justify-center items-start p-2'>
-              <motion.div
-                animate={{
-                  y: [0, 24, 0],
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                }}
-                className='w-2 h-2 rounded-full bg-white mb-1'
-              />
-            </div>        
+        <div className='absolute bottom-16 w-full right-0'>
+          <motion.div
+              animate={{
+                y: [0, 24, 0],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "loop",
+              }}
+              className='scroll-down'
+          />
         </div>
       </a>
     </section>

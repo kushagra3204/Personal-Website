@@ -19,7 +19,9 @@ module.exports = {
         xs: "450px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/herobg.png')",
+        "hero-pattern-dark": "url('/src/assets/herobg_dark.png')",
+        "hero-pattern-light": "url('/src/assets/herobg_light.png')",
+        
       },
       cursor:{
         "fancy": "url('/src/assets/cursor1.svg'),auto",
