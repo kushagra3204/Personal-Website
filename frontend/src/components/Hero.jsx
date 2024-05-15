@@ -28,7 +28,7 @@ const Hero = () => {
       </div> */}
       
       <a href='#about'>
-        <div className='absolute bottom-16 w-full right-0'>
+        <div className='absolute bottom-28 lg:bottom-16 md:bottom-16 xl:bottom-16 w-full right-0'>
           <motion.div
               animate={{
                 y: [0, 24, 0],
