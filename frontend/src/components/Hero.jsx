@@ -14,21 +14,18 @@ const Hero = () => {
         <div className="">
           <h1 className={`${styles.heroHeadText}`}><span className="text-[#915eff]">Kushagra Agarwal</span></h1>
           <p className={`${styles.heroSubText} mt-4 text-white-100`}>Software Developer | Competitive Programmer | Student</p>
-          <div className="w-full flex justify-center items-center md:hidden xl:hidden lg:hidden sm:hidden">
-            <img src={programming} className="h-[270px] w-[270px]" />
-          </div>
         </div>
       </div>
       
       <div className="xl:h-[600px] lg:h-[600px] md:h-[550px] sm:flex hidden bottom-4 absolute justify-center items-center w-full">
         <ComputersCanvas/>
       </div>
-      {/* <div className="w-full absolute flex justify-center items-center bottom-20 md:hidden xl:hidden lg:hidden sm:hidden">
+      <div className="w-full absolute flex justify-center items-center bottom-36 md:hidden xl:hidden lg:hidden sm:hidden">
         <img src={programming} className="h-[270px] w-[270px]" />
-      </div> */}
+      </div>
       
       <a href='#about'>
-        <div className='absolute bottom-28 lg:bottom-16 md:bottom-16 xl:bottom-16 w-full right-0'>
+        <div className='absolute bottom-36 lg:bottom-16 md:bottom-16 xl:bottom-16 w-full right-0'>
           <motion.div
               animate={{
                 y: [0, 24, 0],
