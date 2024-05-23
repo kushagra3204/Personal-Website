@@ -12,9 +12,9 @@ const styles = {
       "lg:text-[18px] sm:text-[13px] xs:text-[13px] text-[12px] lg:leading-[28px]",
 
     sectionHeadText:
-      "text-white font-black md:text-[40px] sm:text-[30px] xs:text-[25px] text-[23px]",
+      "font-black md:text-[40px] sm:text-[30px] xs:text-[25px] text-[23px]",
     sectionSubText:
-      "sm:text-[18px] text-[12px] text-secondary uppercase tracking-wider",
+      "sm:text-[18px] text-[12px] uppercase tracking-wider",
   };
   
   export { styles };

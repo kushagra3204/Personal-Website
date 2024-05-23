@@ -8,7 +8,7 @@ import { Tilt } from 'react-tilt'
 
 const SkillContainer = (container) => {
   return (
-    <Tilt className='lg:w-[90px] sm:w-[80px] xs:w-[70px] w-[60px] green-pink-gradient p-[1px] lg:rounded-[20px] sm:rounded-[16px] xs:rounded-[14px] rounded-[12px] shadow-card'>
+    <Tilt className={`lg:w-[90px] sm:w-[80px] xs:w-[70px] w-[60px] ${container.darkThemeEnabled?'green-pink-gradient':'green-pink-gradient-light'} p-[1px] lg:rounded-[20px] sm:rounded-[16px] xs:rounded-[14px] rounded-[12px] shadow-card`}>
       
         <div
           // eslint-disable-next-line react/no-unknown-property
@@ -17,7 +17,7 @@ const SkillContainer = (container) => {
             scale: 1,
             speed: 450,
           }}
-          className='bg-tertiary lg:rounded-[20px] sm:rounded-[16px] xs:rounded-[14px] rounded-[12px] lg:h-[90px] sm:h-[80px] xs:h-[70px] h-[60px] flex justify-evenly items-center flex-col'
+          className={`${container.darkThemeEnabled?'bg-tertiary':'bg-[#eaefcf]'} lg:rounded-[20px] sm:rounded-[16px] xs:rounded-[14px] rounded-[12px] lg:h-[90px] sm:h-[80px] xs:h-[70px] h-[60px] flex justify-evenly items-center flex-col`}
         >
           <img
             src={container.icon}
@@ -30,20 +30,20 @@ const SkillContainer = (container) => {
   );
 }
 
-const Skills = () => {
+const Skills = ({darkThemeEnabled}) => {
   return (
     <div>
         <motion.div 
             variants={textVariant()}
             className='mt-5'
         >
-            <p className={styles.sectionSubText}>Languages & Frameworks Worked with</p>
-            <h2 className={styles.sectionHeadText}>Skills</h2>
+            <p className={`${styles.sectionSubText} ${darkThemeEnabled?'text-secondary':'text-slate-500'}`}>Languages & Frameworks Worked with</p>
+            <h2 className={`${styles.sectionHeadText} ${darkThemeEnabled?'text-white':'text-slate-800'}`}>Skills</h2>
         </motion.div>
         <motion.div className='flex flex-row flex-wrap justify-center lg:gap-12 sm:gap-10 xs:gap-8 gap-6 mt-10' variants={fadeIn("","",0.1,1)}>
             {technologies.map((technology) => (
             <div key={technology.name}>
-                <SkillContainer icon={technology.icon} name={technology.name}/>
+                <SkillContainer icon={technology.icon} name={technology.name} darkThemeEnabled={darkThemeEnabled} />
             </div>
             ))}
         </motion.div>

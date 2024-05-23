@@ -2,8 +2,33 @@
   border-radius: 50px;
 }
 
-.box {
-  --border-angle: 0turn; /* For animation. */
+.light-theme-box {
+  --border-angle: 0turn;
+  --main-bg: conic-gradient(
+    from var(--border-angle),
+    #DEC,
+    #EED 5%,
+    #EED 60%,
+    #DEC 95%
+  );
+  border: solid 3px transparent;
+  --gradient-border: conic-gradient(
+    from var(--border-angle), 
+    transparent 25%, 
+    #F70, 
+    #0FC 99%,
+    transparent
+  );
+  background: 
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box, 
+    var(--main-bg) border-box;
+  background-position: center center;
+  animation: bg-spin 3s linear infinite;
+}
+
+.dark-theme-box {
+  --border-angle: 0turn;
   --main-bg: conic-gradient(
     from var(--border-angle),
     #213,
@@ -21,23 +46,17 @@
   animation: bg-spin 3s linear infinite;
 }
 
-.box:hover {
-  animation-play-state: paused;
-}
-
 @keyframes bg-spin {
   to {
     --border-angle: 1turn;
   }
 }
 
-/* Custom Property */
 @property --border-angle {
   syntax: "<angle>";
   inherits: true;
   initial-value: 0turn;
 }
-
 
 .scroll-down {
   opacity: 1;
@@ -65,16 +84,16 @@
 }
 
 .scroll-down:before {
-    position: absolute;
-    top: calc(50% - 8px);
-    left: calc(50% - 6px);
-    transform: rotate(-45deg);
-    display: block;
-    width: 12px;
-    height: 12px;
-    content: "";
-    border: 2px solid white;
-    border-width: 0px 0 2px 2px;
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 6px);
+  transform: rotate(-45deg);
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: "";
+  border: 2px solid white;
+  border-width: 0px 0 2px 2px;
 }
 
 @keyframes bounce {

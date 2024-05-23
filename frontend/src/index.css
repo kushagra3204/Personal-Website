@@ -42,7 +42,7 @@ div::-webkit-scrollbar {
 }
 
 .black-gradient {
-  background: #000000; /* fallback for old browsers */
+  background: #000000;
   background: -webkit-linear-gradient(
     to right,
     #434343,
@@ -55,6 +55,35 @@ div::-webkit-scrollbar {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.black-border-gradient {
+  background: #ccc;
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #ccc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #ccc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.white-gradient {
+  background: #ffffff; /* Light background color */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffffff,
+    #bcbcbc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #bcbcbc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
 .violet-gradient {
   background: #804dee;
   background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
@@ -65,10 +94,29 @@ div::-webkit-scrollbar {
   );
 }
 
+.light-gradient {
+  background: #6ea100; 
+  background: linear-gradient(-90deg, #6ea100 0%, rgba(195, 204, 175, 0) 100%); /* Inverted color: #7fb211 */
+  background: -webkit-linear-gradient(-90deg, #6ea100 0%, rgba(195, 204, 175, 0) 100%); /* Inverted color: #7fb211 */
+}
+
+
 .green-pink-gradient {
   background: "#00cea8";
   background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
   background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+}
+
+.green-pink-gradient-light {
+  background: "#ff3157";
+  background: linear-gradient(90.13deg, #ff3157 1.9%, #40a800 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #ff3157 1.9%, #40a800 97.5%);
+}
+
+.green-pink-gradient-light-border {
+  border-image: linear-gradient(90.13deg, #ff3157 1.9%, #40a800 97.5%);
+  border-image-slice: 1;
+  border-radius: 20px;
 }
 
 .orange-text-gradient {

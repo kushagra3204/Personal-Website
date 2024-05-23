@@ -1,7 +1,7 @@
 import { Html, useProgress } from "@react-three/drei";
 import "../App.css";
 
-const Loader = () => {
+const Loader = ({darkThemeEnabled}) => {
   const {progress} = useProgress();
   return (
     <Html>

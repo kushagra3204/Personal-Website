@@ -4,10 +4,16 @@ import instagram from "./instagram.svg";
 import linkedin from "./linkedin.png";
 import codechef from "./codechef.png";
 import programming from "./programming.svg";
+import lightmode from "./light_mode.png";
+import darkmode from "./dark_mode.png";
+import kaggle from "./kaggle.svg";
 
 
-import menu from "./menu.svg";
-import close from "./close.svg";
+import menudark from "./menu_dark.svg";
+import closedark from "./close_dark.svg";
+import menulight from "./menu_light.svg";
+import closelight from "./close_light.svg";
+
 
 import css from "./tech/css.png";
 import spring from "./tech/spring.png"
@@ -38,12 +44,17 @@ import ContactBg from "./contact.svg";
 export {
   logo,
   programming,
+  lightmode,
+  darkmode,
   github,
+  kaggle,
   instagram,
   linkedin,
   codechef,
-  menu,
-  close,
+  menudark,
+  closedark,
+  menulight,
+  closelight,
   css,
   git,
   html,

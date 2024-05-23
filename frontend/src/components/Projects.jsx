@@ -15,10 +15,10 @@ const ProjectContainer = (container) => {
         scale: 1,
         speed: 450,
       }}
-      className='p-[1px] rounded-2xl lg:w-[320px] sm:w-[280px] xs:w-[260px] w-[240px] green-pink-gradient'>
-        <motion.div className='p-3 bg-tertiary relative w-full min-h-[230px] rounded-2xl' > 
-        <hr className='absolute inset-0 flex justify-center items-center lg:mt-10 sm:mt-10 mt-9 border-1' />
-        <hr className='absolute inset-0 flex justify-center items-center lg:my-14 sm:my-12 my-11 border-1' />
+      className={`p-[1px] rounded-2xl lg:w-[320px] sm:w-[280px] xs:w-[260px] w-[240px] ${container.darkThemeEnabled?'green-pink-gradient':'green-pink-gradient-light'}`}>
+        <motion.div className={`p-3 ${container.darkThemeEnabled?'bg-tertiary':'bg-[#eaefcf]'} relative w-full min-h-[230px] rounded-2xl`} > 
+        <hr className={`${container.darkThemeEnabled?'border-white':'border-slate-900'} absolute inset-0 flex justify-center items-center lg:mt-10 sm:mt-10 mt-9 border-[1.1px]`} />
+        <hr className={`${container.darkThemeEnabled?'border-white':'border-slate-900'} absolute inset-0 flex justify-center items-center lg:my-14 sm:my-12 my-11 border-[1.1px]`} />
         <div className='absolute inset-0 flex justify-center my-4'>
           <img src={githubBorder2} className='absolute lg:h-16 lg:w-16 sm:h-14 sm:w-14 h-12 w-12'/>
         </div>
@@ -34,20 +34,20 @@ const ProjectContainer = (container) => {
               />
             </div>
           </div>
-        <p className='relative lg:mt-20 sm:mt-18 xs:mt-16 mt-14 text-white font-bold lg:text-[20px] sm:text-[18px] xs:text-[16px] text-[14px]'>{container.title}</p>
-        <p className='relative lg:mt-4 sm:mt-3 xs:mt-3 mt-1 lg:text-[14px] sm:text-[13px] xs:text-[13px] text-[12px] '><span className='text-white font-bold '>Technologies used:</span> {container.tech}</p>
-        <p className='lg:text-[14px] sm:text-[13px] xs:text-[13px] text-[12px] mt-2'><span className='text-white font-bold '>About:</span> {container.about}</p>
+        <p className={`relative lg:mt-20 sm:mt-18 xs:mt-16 mt-14 ${container.darkThemeEnabled?'text-white':'text-slate-800'} font-bold lg:text-[20px] sm:text-[18px] xs:text-[16px] text-[14px]`}>{container.title}</p>
+        <p className={`${container.darkThemeEnabled?'text-white':'text-slate-600'}  relative lg:mt-4 sm:mt-3 xs:mt-3 mt-1 lg:text-[14px] sm:text-[13px] xs:text-[13px] text-[12px]`} ><span className={`font-bold`} >Technologies used:</span> {container.tech}</p>
+        <p className={`${container.darkThemeEnabled?'text-white':'text-slate-600'}  lg:text-[14px] sm:text-[13px] xs:text-[13px] text-[12px] mt-2`}><span className='font-bold'>About:</span> {container.about}</p>
         </motion.div>
     </Tilt>
   );
 }
 
-const Projects = () => {
+const Projects = ({darkThemeEnabled}) => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>My Work</p>
-        <h2 className={styles.sectionHeadText}>Projects</h2>
+        <p className={`${styles.sectionSubText} ${darkThemeEnabled?'text-secondary':'text-slate-500'}`}>My Work</p>
+        <h2 className={`${styles.sectionHeadText} ${darkThemeEnabled?'text-white':'text-slate-800'}`}>Projects</h2>
       </motion.div>
           <motion.div 
             className='mt-6 gap-7 flex flex-row overflow-x-auto p-4'
@@ -55,7 +55,7 @@ const Projects = () => {
           >
             {projects.map((project) => (
             <div key={project.title}>
-                <ProjectContainer  title={project.title} tech={project.tech} about={project.about} links={project.links}/>
+                <ProjectContainer  title={project.title} tech={project.tech} about={project.about} links={project.links} darkThemeEnabled={darkThemeEnabled} />
             </div>
             ))}
           </motion.div>
