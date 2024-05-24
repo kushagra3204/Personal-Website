@@ -90,7 +90,7 @@ const Contact = ({darkThemeEnabled}) => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className={`${darkThemeEnabled?'bg-tertiary':'bg-[#f5f7e7]'} xl:py-4 lg:py-4 sm:py-4 md:py-4 xs:py-2 py-2 xl:px-6 lg:px-6 sm:px-6 md:px-6 xs:px-4 px-4 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium`}
+              className={`${darkThemeEnabled?'bg-tertiary text-white':'bg-[#f5f7e7] text-slate-600'} xl:py-4 lg:py-4 sm:py-4 md:py-4 xs:py-2 py-2 xl:px-6 lg:px-6 sm:px-6 md:px-6 xs:px-4 px-4 placeholder:text-secondary rounded-lg outline-none border-none font-medium`}
             />
           </label>
           <label className='flex flex-col lg:text-[14px] sm:text-[13px] xs:text-[13px] text-[12px]'>
@@ -102,7 +102,7 @@ const Contact = ({darkThemeEnabled}) => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your Email-ID?"
-              className={`${darkThemeEnabled?'bg-tertiary':'bg-[#f5f7e7]'} xl:py-4 lg:py-4 sm:py-4 md:py-4 xs:py-2 py-2 xl:px-6 lg:px-6 sm:px-6 md:px-6 xs:px-4 px-4 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium`}
+              className={`${darkThemeEnabled?'bg-tertiary text-white':'bg-[#f5f7e7] text-slate-600'} xl:py-4 lg:py-4 sm:py-4 md:py-4 xs:py-2 py-2 xl:px-6 lg:px-6 sm:px-6 md:px-6 xs:px-4 px-4 placeholder:text-secondary rounded-lg outline-none border-none font-medium`}
             />
           </label>
           <label className='flex flex-col lg:text-[14px] sm:text-[13px] xs:text-[13px] text-[12px]'>
@@ -114,7 +114,7 @@ const Contact = ({darkThemeEnabled}) => {
               value={form.message}
               onChange={handleChange}
               placeholder='What you want to say?'
-              className={`${darkThemeEnabled?'bg-tertiary':'bg-[#f5f7e7]'} xl:py-4 lg:py-4 sm:py-4 md:py-4 xs:py-2 py-2 xl:px-6 lg:px-6 sm:px-6 md:px-6 xs:px-4 px-4 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium resize-none`}
+              className={`${darkThemeEnabled?'bg-tertiary text-white':'bg-[#f5f7e7] text-slate-600'} xl:py-4 lg:py-4 sm:py-4 md:py-4 xs:py-2 py-2 xl:px-6 lg:px-6 sm:px-6 md:px-6 xs:px-4 px-4 placeholder:text-secondary rounded-lg outline-none border-none font-medium resize-none`}
             />
           </label>
           <button
