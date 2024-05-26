@@ -1,42 +1,28 @@
 import { BrowserRouter } from "react-router-dom";
 import { About, Skills, Contact, Hero, Navbar, Projects, StarsCanvas } from "./components";
 import { useEffect, useState } from "react";
+import Cookies from "js-cookie";
 
 function App() {
   const [darkThemeEnabled, setDarkTheme] = useState(true);
 
-  useEffect(() => {
-    fetch("http://localhost:4000/api/getTheme", {
-      method: "get",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      credentials: 'include'
-    })
-      .then(res => res.json())
-      .then(data => {
-        let { theme } = data;
-        setDarkTheme(theme === "dark");
-      })
-      .catch(error => {
-        console.log("Error: ", error);
-      });
-  }, []);
-
   const updateThemeState = (updateState) => {
-    fetch("http://localhost:4000/api/setTheme", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ "theme": updateState ? "dark" : "light" }),
-      credentials: 'include'
-    })
-      .catch(error => {
-        console.log("Error: ", error);
-      });
+    Cookies.set("darkTheme",updateState,{expires: 7});
     setDarkTheme(updateState);
   };
+
+  useEffect(() => {
+    var darkThemeCookie = Cookies.get("darkTheme"); 
+    if(darkThemeCookie) {
+      if(darkThemeCookie==="true") {
+        setDarkTheme(true);
+      } else {
+        setDarkTheme(false);
+      }
+    } else {
+      Cookies.set("darkTheme",true,{expires: 7});
+    }
+  },[]);
 
   return (
     <BrowserRouter>
