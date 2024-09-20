@@ -5,7 +5,6 @@ import Cookies from "js-cookie";
 
 function App() {
   const [darkThemeEnabled, setDarkTheme] = useState(true);
-
   const updateThemeState = (updateState) => {
     Cookies.set("darkTheme",updateState,{expires: 7});
     setDarkTheme(updateState);
